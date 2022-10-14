@@ -19,12 +19,12 @@ headers = {
 
 # Теперь сохраним страницу в файл:
 # src = BeautifulSoup(req.content, 'html.parser').prettify()
-# with open('D:\Python projects\Beautiful soup\cables\provoda_montazhnye.html', 'w', encoding='UTF-8') as file:
+# with open('provoda_montazhnye.html', 'w', encoding='UTF-8') as file:
 #     file.write(src)
 
 # Код запроса и код сохранения больше не нужны и можно их закомментировать.
 # Далее откроем файл, прочитаем и сохраним код страницы в переменную:
-# with open('D:\Python projects\Beautiful soup\cables\provoda_montazhnye.html', 'r', encoding='UTF-8') as file:
+# with open('provoda_montazhnye.html', 'r', encoding='UTF-8') as file:
 #     src = file.read()
 # # print(src)
 
@@ -71,12 +71,12 @@ headers = {
 # Далее count можно убрать, сохранить все страницы в файлы и закомментировать эту часть кода.
 
 # Затем в каждом файле типа кабеля ищем ссылки на разные диаметры.
-all_files_cable_types = os.listdir('D:\\Python projects\\Beautiful soup\\cables\\data_provoda_montazhnye')
+all_files_cable_types = os.listdir('data_provoda_montazhnye')
 # print(all_files_cable_types)
 
 # all_cable_diameters_dict = {}
 # for i in all_files_cable_types:
-#     file_name = 'D:\\Python projects\\Beautiful_soup\\cables\\data_provoda_montazhnye\\' + i
+#     file_name = 'data_provoda_montazhnye\\' + i
 #     with open(file_name, 'r', encoding='UTF-8') as file:
 #         src = file.read()
 #     soup = BeautifulSoup(src, 'html.parser')
@@ -92,14 +92,14 @@ all_files_cable_types = os.listdir('D:\\Python projects\\Beautiful soup\\cables\
 # print(all_cable_diameters_dict)
 
 # Сохраним словарь с этими ссылками в json-файл:
-# with open('D:\\Python projects\\Beautiful soup\\cables\\all_diameters_provoda_montazhnye\\all_diameters.json', 'w', encoding='UTF-8') as file:
+# with open('all_diameters_provoda_montazhnye\\all_diameters.json', 'w', encoding='UTF-8') as file:
 #     json.dump(all_cable_diameters_dict, file, indent=4, ensure_ascii=False)
 
 # Код выше можно закомментировать. Теперь открываем json-файл и циклом переходим по каждой ссылке. В открывшейся +\
 # странице ищем код ссылки на страницу с информацией. И каждую страницу с информацией сохраняем в html-файл для +\
 # дальнейшего сбора информации о конкретном проводе.
 
-with open('D:\\Python projects\\Beautiful soup\\cables\\all_diameters_provoda_montazhnye\\all_diameters.json', encoding='UTF-8') as file:
+with open('all_diameters_provoda_montazhnye\\all_diameters.json', encoding='UTF-8') as file:
     all_cable_diameters = json.load(file)
 
 # count - счетчик пройденных ссылок.
@@ -158,13 +158,13 @@ def formatting(fraze):  # функция замены непонятных си�
 
 all_cables = []  # список всех кабелей
 # Создаем список html-файлов:
-all_files_cable_diameters = os.listdir('D:\\Python projects\\Beautiful soup\\cables\\all_diameters_provoda_montazhnye')
+all_files_cable_diameters = os.listdir('all_diameters_provoda_montazhnye')
 del all_files_cable_diameters[0]  # удаляем из списка файл с индексом 0, т.к. это all_diameters.json
 print(all_files_cable_diameters)
 
 # По очереди открываем все файлы и ищем нужную информацию:
 for i in all_files_cable_diameters:
-    file_name = 'D:\\Python projects\\Beautiful soup\\cables\\all_diameters_provoda_montazhnye\\' + i
+    file_name = 'all_diameters_provoda_montazhnye\\' + i
     with open(file_name, 'r', encoding='UTF-8') as file:
         src = file.read()
     soup = BeautifulSoup(src, 'html.parser')
@@ -242,4 +242,4 @@ for i in all_cables:
     data = data.append(i, ignore_index=True)
 
 # сохраняем в csv-файл
-data.to_csv('D:\\Python projects\\Beautiful soup\\cables\\provoda_montazhnye.csv', index=False)
+data.to_csv('provoda_montazhnye.csv', index=False)
