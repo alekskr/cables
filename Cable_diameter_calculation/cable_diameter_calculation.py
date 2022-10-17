@@ -10,13 +10,13 @@ def main():
     n_wires = 0  # общее число проводов
     d_wires = []  # список диаметров проводов
     for i in range(n_type_wires):
-        print(f'Введите обозначение провода (например МГТФ 0,03 или МС 16-15 2х0,2):')
+        print(f'Введите обозначение провода №{i + 1} (например МГТФ 0,03 или МС 16-15 2х0,2): ', end='')
         my_wire = input()
         my_wire_checked = check_name_wire(my_wire)  # вызов функции корректности ввода
         d_wire = define_wire_params(my_wire_checked)  # вызов функции определения диаметра данного провода из json файла
         d_wires.append(d_wire)
         # print(d_wires)
-        print(f'Введите количество проводов данного типа:')
+        print('Введите количество проводов данного типа: ', end='')
         n_wire = int(input())  # количество проводов данного типа
         n_wires += n_wire  # прибавляем к общему количеству проводов
         # print(n_wires)

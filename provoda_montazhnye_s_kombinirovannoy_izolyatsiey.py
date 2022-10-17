@@ -46,11 +46,11 @@ req = requests.get(url, headers=headers)
 # print(all_cable_types_dict)
 
 # Сохраним словарь с ссылками в json-файл:
-# with open('provoda_montazhnye_s_kombinirovannoy_izolyatsiey_dict.json', 'w', encoding='UTF-8') as file:
+# with open('provoda_montazhnye_s_kombinirovannoy_izolyatsiey_urls.json', 'w', encoding='UTF-8') as file:
 #     json.dump(all_cable_types_dict, file, indent=4, ensure_ascii=False)
 
 # Теперь можно закомментировать весь код выше и загрузим json-файл в переменную:
-with open('provoda_montazhnye_s_kombinirovannoy_izolyatsiey_dict.json', encoding='UTF-8') as file:
+with open('provoda_montazhnye_s_kombinirovannoy_izolyatsiey_urls.json', encoding='UTF-8') as file:
     all_cable_types = json.load(file)
 # # print(all_cable_types)
 

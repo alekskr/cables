@@ -21,7 +21,7 @@ def convjson(csv_file, json_file):
         jsonfile.write(json.dumps(data, indent=4))
 
 
-csv_filename = r'C:\Python projects\cables\provoda_montazhnye.csv'
+csv_filename = r'C:\Python projects\cables\data\provoda_montazhnye.csv'
 json_filename = r'C:\Python projects\cables\Cable_diameter_calculation\wires.json'
 
 convjson(csv_filename, json_filename)

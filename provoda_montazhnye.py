@@ -47,7 +47,7 @@ headers = {
 #     json.dump(all_cable_types_dict, file, indent=4, ensure_ascii=False)
 
 # Теперь можно закомментировать весь код выше и загрузим json-файл в переменную:
-# with open('provoda_montazhnye_dict.json', encoding='UTF-8') as file:
+# with open('provoda_montazhnye_urls.json', encoding='UTF-8') as file:
 #     all_cable_types = json.load(file)
 # # print(all_cable_types)
 
