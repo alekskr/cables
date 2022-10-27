@@ -1,4 +1,5 @@
 # cables
-Parsing a site to get wire data. 
-The code is in .py files. These files have a full description in the comments, but in Russian.
-As a result, we get two csv-files with data.
+Программа подсчета диаметра жгута из определенных типов проводов (файл - Cable_diameter_calculation\cable_diameter_calculation.exe). Вам просто нужно указать типы проводов и их количество. Подсчет осуществляется на основе данных из файла wires.json.
+
+Для того, чтобы получить данные проводов, необходимо спарсить эти данные с соответствующего сайта. Программы парсинга данных находятся в файлах provoda_...py.
+Далее все данные заносятся в соответствующие csv-файлы. Или с помощью программы в файле concat_all_wires.py можно создать общий csv-файл сразу со всеми проводами.
