@@ -7,49 +7,48 @@ from time import sleep
 import pandas as pd
 
 
-# url = 'https://bystrokabel.ru/item/provoda_montazhnye'
+url = 'https://bystrokabel.ru/item/mpo'
 # В метод get() вторым параметром передадим заголовки. В заголовки добавим accept и user agent. Делается для того, +\
 # чтобы показать сайту, что мы не бот. Правой кнопкой мыши - просмотреть код - во вкладке Network в любом из +\
 # get-запросов Headers - Requests Headers:
+
 headers = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-    'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Mobile Safari/537.36'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36'
 }
 # req = requests.get(url, headers=headers)
 
 # Теперь сохраним страницу в файл:
 # src = BeautifulSoup(req.content, 'html.parser').prettify()
-# with open('provoda_montazhnye.html', 'w', encoding='UTF-8') as file:
+# with open('provoda_mpo.html', 'w', encoding='UTF-8') as file:
 #     file.write(src)
 
 # Код запроса и код сохранения больше не нужны и можно их закомментировать.
 # Далее откроем файл, прочитаем и сохраним код страницы в переменную:
-# with open('provoda_montazhnye.html', 'r', encoding='UTF-8') as file:
+# with open('provoda_mpo.html', 'r', encoding='UTF-8') as file:
 #     src = file.read()
-# # print(src)
+# print(src)
 
 # Создадим объект soup, передадим переменную src и парсер:
 # soup = BeautifulSoup(src, 'html.parser')
 
-# Ищем ссылки на типы проводов. Все они имеют один общий класс blue, поэтому поиск делаем по нему.
-# all_cable_types_list = soup.find_all(class_='blue')
-# all_cable_types_dict = {}
-
-# Метод strip() нужен, чтобы убрать все ненужные пробелы в строке.
-# for i in all_cable_types_list:
-#     item_text = i.text.strip()
-#     item_link = 'https://bystrokabel.ru/' + i.get('href')
-#     all_cable_types_dict[item_text] = item_link
-# print(all_cable_types_dict)
+# all_cable_diameters_dict = {}
+# all_cable_diameters = soup.find(class_='table-remains').find_all('a')
+# print(all_cable_diameters)
+# for j in all_cable_diameters:
+#     item_text = j.text.strip()
+#     item_link = 'https://bystrokabel.ru' + str(j.get('href'))
+#     all_cable_diameters_dict[item_text] = item_link
+# print(all_cable_diameters_dict)
 
 # Сохраним словарь с ссылками в json-файл:
-# with open('provoda_montazhnye_urls.json', 'w', encoding='UTF-8') as file:
-#     json.dump(all_cable_types_dict, file, indent=4, ensure_ascii=False)
+# with open('provoda_mpo_urls.json', 'w', encoding='UTF-8') as file:
+#     json.dump(all_cable_diameters_dict, file, indent=4, ensure_ascii=False)
 
 # Теперь можно закомментировать весь код выше и загрузим json-файл в переменную:
-# with open('provoda_montazhnye_urls.json', encoding='UTF-8') as file:
+# with open('provoda_mpo_urls.json', encoding='UTF-8') as file:
 #     all_cable_types = json.load(file)
-# # print(all_cable_types)
+# print(all_cable_types)
 
 # Теперь нужно создать цикл, на каждой итерации которого мы будем заходить на новую страницу типа провода и собирать +\
 # там информацию и записывать в файл. Каждую страницу сохранять под именем типа провода. Все пробелы в наименованиях +\
@@ -64,42 +63,17 @@ headers = {
 #     req = requests.get(url=cable_link, headers=headers)
 #     src = req.text
 #
-#     with open(f'data_provoda_montazhnye\\{cable_name}.html', 'w', encoding='UTF-8') as file:
+#     with open(f'data_provoda_mpo\\{cable_name}.html', 'w', encoding='UTF-8') as file:
 #         file.write(src)
 #
-#         # count += 1
+#             # count += 1
 # Далее count можно убрать, сохранить все страницы в файлы и закомментировать эту часть кода.
-
-# Затем в каждом файле типа провода ищем ссылки на разные диаметры.
-all_files_cable_types = os.listdir('data_provoda_montazhnye')
-# print(all_files_cable_types)
-
-# all_cable_diameters_dict = {}
-# for i in all_files_cable_types:
-#     file_name = 'data_provoda_montazhnye\\' + i
-#     with open(file_name, 'r', encoding='UTF-8') as file:
-#         src = file.read()
-#     soup = BeautifulSoup(src, 'html.parser')
-#     try:
-#         all_cable_diameters = soup.find(class_='table-remains').find_all('a')
-#     except AttributeError:
-#         all_cable_diameters = soup.find(class_='item-list').find_all('a')
-#     print(all_cable_diameters)
-#     for j in all_cable_diameters:
-#         item_text = j.text.strip()
-#         item_link = 'https://bystrokabel.ru' + str(j.get('href'))
-#         all_cable_diameters_dict[item_text] = item_link
-# print(all_cable_diameters_dict)
-
-# Сохраним словарь с этими ссылками в json-файл:
-# with open('all_diameters_provoda_montazhnye\\all_diameters.json', 'w', encoding='UTF-8') as file:
-#     json.dump(all_cable_diameters_dict, file, indent=4, ensure_ascii=False)
 
 # Код выше можно закомментировать. Теперь открываем json-файл и циклом переходим по каждой ссылке. В открывшейся +\
 # странице ищем код ссылки на страницу с информацией. И каждую страницу с информацией сохраняем в html-файл для +\
 # дальнейшего сбора информации о конкретном проводе.
 
-with open('all_diameters_provoda_montazhnye\\all_diameters.json', encoding='UTF-8') as file:
+with open('provoda_mpo_urls.json', encoding='UTF-8') as file:
     all_cable_diameters = json.load(file)
 
 # count - счетчик пройденных ссылок.
@@ -114,32 +88,29 @@ with open('all_diameters_provoda_montazhnye\\all_diameters.json', encoding='UTF-
 
 # count = 0
 # print(f'Всего итераций {len(all_cable_diameters)}')
+# spisok_proverennyh_ssylok = []
 # for cable_name_diameter, cable_link in all_cable_diameters.items():
-#     req = requests.get(cable_link, headers=headers)
-#     soup = BeautifulSoup(req.content, 'html.parser')
-#     count += 1
+#     if cable_link not in spisok_proverennyh_ssylok:
+#         req = requests.get(cable_link, headers=headers)
+#         soup = BeautifulSoup(req.content, 'html.parser')
+#         count += 1
 #
-#     try:
-#         print(f'# Итерация {count}')
-#         if soup.find(class_='info noborder'):
+#         try:
+#             print(f'# Итерация {count}')
 #             info_link = 'https://bystrokabel.ru' + soup.find(class_='info noborder').get('href')
 #             print('info link= ', info_link)
 #             req2 = requests.get(info_link, headers=headers)
 #             file_name = BeautifulSoup(req2.content, 'html.parser').h1.text
 #             print('file name= ', file_name[7:])
-#             with open(f'all_diameters_provoda_montazhnye\\{file_name[7:]}.html', 'w', encoding='UTF-8') as file:
+#             with open(f'all_diameters_provoda_mpo\\{file_name[7:]}.html', 'w', encoding='UTF-8') as file:
 #                 file.write(req2.text)
-#         elif soup.find(class_='mark-name').find('nobr'):
-#             file_name = BeautifulSoup(req.content, 'html.parser').h1.text
-#             print('file name= ', file_name[7:])
-#             with open(f'all_diameters_provoda_montazhnye\\{file_name[7:]}.html', 'w', encoding='UTF-8') as file:
-#                 file.write(req.text)
-#         print(f'# Итерация {count}. Файл записан!')
-#         sleep(random.randrange(1, 3))
+#             print(f'# Итерация {count}. Файл записан!')
+#             sleep(random.randrange(2, 4))
 #
-#     except (TypeError, AttributeError):
-#         print(f'#Ошибка. Итерация {count}. {cable_name_diameter} не записан...')
-#         sleep(random.randrange(1, 3))
+#         except (TypeError, AttributeError):
+#             print(f'#Ошибка. Итерация {count}. {cable_name_diameter} не записан...')
+#             sleep(4)
+#     spisok_proverennyh_ssylok.append(cable_link)
 
 
 # После того, как все html-файлы готовы, можно приступать к извлечению данных из них.
@@ -158,13 +129,12 @@ def formatting(fraze):  # функция замены непонятных си�
 
 all_cables = []  # список всех кабелей
 # Создаем список html-файлов:
-all_files_cable_diameters = os.listdir('all_diameters_provoda_montazhnye')
-del all_files_cable_diameters[0]  # удаляем из списка файл с индексом 0, т.к. это all_diameters.json
+all_files_cable_diameters = os.listdir('all_diameters_provoda_mpo')
 # print(all_files_cable_diameters)
 
 # По очереди открываем все файлы и ищем нужную информацию:
 for i in all_files_cable_diameters:
-    file_name = 'all_diameters_provoda_montazhnye\\' + i
+    file_name = 'all_diameters_provoda_mpo\\' + i
     with open(file_name, 'r', encoding='UTF-8') as file:
         src = file.read()
     soup = BeautifulSoup(src, 'html.parser')
@@ -226,7 +196,7 @@ for i in all_files_cable_diameters:
     all_cables.append(cable_properties)  # данный провод добавляем в список всех проводов
     # print(cable_properties)
 
-print(all_cables)
+# print(all_cables)
 
 # создание Data Frame
 # создаем заголовки таблицы
@@ -239,8 +209,8 @@ data = pd.DataFrame({'Провод': [],
 
 # добавление в таблицу всех проводов
 for i in all_cables:
-    data = pd.concat([data, pd.DataFrame([i])], ignore_index=True)
-    # data = data.append(i, ignore_index=True)
+    i_frame = pd.DataFrame([i])
+    data = pd.concat([data, i_frame], ignore_index=True)
 
 # сохраняем в csv-файл
-data.to_csv('data\\provoda_montazhnye.csv', index=False)
+data.to_csv('data\\provoda_mpo.csv', index=False, encoding='utf-8')

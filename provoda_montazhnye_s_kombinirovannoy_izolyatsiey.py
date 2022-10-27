@@ -74,12 +74,12 @@ with open('provoda_montazhnye_s_kombinirovannoy_izolyatsiey_urls.json', encoding
 # Далее count можно убрать, сохранить все страницы в файлы и закомментировать эту часть кода.
 
 # Затем в каждом файле типа кабеля ищем ссылки на разные диаметры.
-# all_files_cable_types = os.listdir('D:\\Python projects\\Beautiful soup\\cables\\data_provoda_montazhnye_s_kombinirovannoy_izolyatsiey')
+# all_files_cable_types = os.listdir('data_provoda_montazhnye_s_kombinirovannoy_izolyatsiey')
 # print(all_files_cable_types)
 #
 # all_cable_diameters_dict = {}
 # for i in all_files_cable_types:
-#     file_name = 'D:\\Python projects\\Beautiful soup\\cables\\data_provoda_montazhnye_s_kombinirovannoy_izolyatsiey\\' + i
+#     file_name = 'data_provoda_montazhnye_s_kombinirovannoy_izolyatsiey\\' + i
 #     with open(file_name, 'r', encoding='UTF-8') as file:
 #         src = file.read()
 #     soup = BeautifulSoup(src, 'html.parser')
@@ -95,14 +95,14 @@ with open('provoda_montazhnye_s_kombinirovannoy_izolyatsiey_urls.json', encoding
 # print(all_cable_diameters_dict)
 
 # Сохраним словарь с этими ссылками в json-файл:
-# with open('D:\\Python projects\\Beautiful soup\\cables\\all_diameters_provoda_montazhnye_s_kombinirovannoy_izolyatsiey\\all_diameters.json', 'w', encoding='UTF-8') as file:
+# with open('all_diameters_provoda_montazhnye_s_kombinirovannoy_izolyatsiey\\all_diameters.json', 'w', encoding='UTF-8') as file:
 #     json.dump(all_cable_diameters_dict, file, indent=4, ensure_ascii=False)
 
 # Код выше можно закомментировать. Теперь открываем json-файл и циклом переходим по каждой ссылке. В открывшейся +\
 # странице ищем код ссылки на страницу с информацией. И каждую страницу с информацией сохраняем в html-файл для +\
 # дальнейшего сбора информации о конкретном проводе.
 
-with open('D:\\Python projects\\Beautiful soup\\cables\\all_diameters_provoda_montazhnye_s_kombinirovannoy_izolyatsiey\\all_diameters.json', encoding='UTF-8') as file:
+with open('all_diameters_provoda_montazhnye_s_kombinirovannoy_izolyatsiey\\all_diameters.json', encoding='UTF-8') as file:
     all_cable_diameters = json.load(file)
 
 # count - счетчик пройденных ссылок.
@@ -161,13 +161,13 @@ def formatting(fraze):  # функция замены непонятных си�
 
 all_cables = []  # список всех кабелей
 # # Создаем список html-файлов:
-all_files_cable_diameters = os.listdir('D:\\Python projects\\Beautiful soup\\cables\\all_diameters_provoda_montazhnye_s_kombinirovannoy_izolyatsiey')
+all_files_cable_diameters = os.listdir('all_diameters_provoda_montazhnye_s_kombinirovannoy_izolyatsiey')
 del all_files_cable_diameters[0]  # удаляем из списка файл с индексом 0, т.к. это all_diameters.json
-print(all_files_cable_diameters)
+# print(all_files_cable_diameters)
 
 # По очереди открываем все файлы и ищем нужную информацию:
 for i in all_files_cable_diameters:
-    file_name = 'D:\\Python projects\\Beautiful_soup\\cables\\all_diameters provoda_montazhnye_s_kombinirovannoy_izolyatsiey\\' + i
+    file_name = 'all_diameters_provoda_montazhnye_s_kombinirovannoy_izolyatsiey\\' + i
     with open(file_name, 'r', encoding='UTF-8') as file:
         src = file.read()
     soup = BeautifulSoup(src, 'html.parser')
@@ -186,11 +186,11 @@ for i in all_files_cable_diameters:
     decoding_1_list = []
     for letter in decoding_1:
         decoding_1_list.append(letter.text)
-    print(decoding_1_list)
+    # print(decoding_1_list)
 
     decoding_2 = soup.find(class_="item-decode-description").text.strip()  # описание символов в обозначении
     decoding_2_list = formatting(decoding_2).split('\n')
-    print(decoding_2_list)
+    # print(decoding_2_list)
 
     decoding = ''  # создаем строку, содержащую и символы, и их описание
     for index in range(len(decoding_1_list)):
@@ -201,7 +201,7 @@ for i in all_files_cable_diameters:
                 decoding += decoding_2_list[index] + '  '
             except IndexError:  # на случай, если описание неполное
                 continue
-    print('decoding', decoding)
+    # print('decoding', decoding)
 
     cable_properties['Расшифровка'] = decoding
 
@@ -216,20 +216,20 @@ for i in all_files_cable_diameters:
     param_values_list = [i.text for i in param_values]
 
     all_name_value = dict(zip(param_names_list, param_values_list))
-    print('all_name_value', all_name_value)
+    # print('all_name_value', all_name_value)
 
     # проверка на соответствие нужному списку параметров required_parameters:
     name_value = {}
     for k, v in all_name_value.items():
         if k in required_parameters:
             name_value[k] = v
-    print('name_value', name_value)
+    # print('name_value', name_value)
 
     cable_properties.update(name_value)  # добавляем нужные параметры в словарь параметров провода
     all_cables.append(cable_properties)  # данный провод добавляем в список всех проводов
-    print(cable_properties)
+    # print(cable_properties)
 
-print(all_cables)
+# print(all_cables)
 
 # создание Data Frame
 # создаем заголовки таблицы
@@ -242,7 +242,8 @@ data = pd.DataFrame({'Провод': [],
 
 # добавление в таблицу всех проводов
 for i in all_cables:
-    data = data.append(i, ignore_index=True)
+    data = pd.concat([data, pd.DataFrame([i])], ignore_index=True)
+    # data = data.append(i, ignore_index=True)
 
 # сохраняем в csv-файл
-data.to_csv('D:\\Python projects\\Beautiful soup\\cables\\provoda_montazhnye_s_kombinirovannoy_izolyatsiey.csv', index=False)
+data.to_csv('data\\provoda_montazhnye_s_kombinirovannoy_izolyatsiey.csv', index=False)

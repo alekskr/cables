@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Наличие кабеля МПО 0,75</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="Мы знаем, где купить МПО 0,75"/>
+		<meta property="og:title" content="Наличие кабеля МПО 0,75"/>
+		<meta property="og:description" content="Мы знаем, где купить МПО 0,75"/>
+		<meta property="og:image" content="/og-image.png"/>
+		<meta name="google-site-verification" content="zAnByKfti4076Y_DFt0XJ5PdUYHpZWiAjg--s8BW-2o"/>
+		<meta name="yandex-verification" content="41886c2e04c2889d" />
+		<link rel="stylesheet" type="text/css" href="/css/styles_2020.css"/>
+		<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+		<link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png"/>
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#fa4f54"/>
+		<link rel="manifest" href="/manifest.json">
+		<link rel="canonical" href="https://bystrokabel.ru/catalog/search?query=%D0%9C%D0%9F%D0%9E+0%2C75">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script defer src="/js/scripts_mobile_new.js"></script>
+		<script defer src="/js/ajax.js"></script>
+	</head>
+	<body>
+		<div class="site">
+
+			<!-- Banner 900x90 -->
+			<table class="banner-900-90">
+				<tr>
+					<td id="top_banner">
+																											<script defer src="https://s0.2mdn.net/ads/studio/cached_libs/createjs_2019.11.15_min.js"></script>
+<script defer src="/js/reklama_cablestar2.js"></script>
+<script defer>
+window.devicePixelRatio = 1;
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("65A579C03B5230489162136AAA549D19");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib._900x90();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage)
+		stage.addEventListener("tick", handleTick)
+		function getProjectionMatrix(container, totalDepth) {
+			var focalLength = 528.25;
+			var projectionCenter = { x : lib.properties.width/2, y : lib.properties.height/2 };
+			var scale = (totalDepth + focalLength)/focalLength;
+			var scaleMat = new createjs.Matrix2D;
+			scaleMat.a = 1/scale;
+			scaleMat.d = 1/scale;
+			var projMat = new createjs.Matrix2D;
+			projMat.tx = -projectionCenter.x;
+			projMat.ty = -projectionCenter.y;
+			projMat = projMat.prependMatrix(scaleMat);
+			projMat.tx += projectionCenter.x;
+			projMat.ty += projectionCenter.y;
+			return projMat;
+		}
+		function handleTick(event) {
+			var cameraInstance = exportRoot.___camera___instance;
+			if(cameraInstance !== undefined && cameraInstance.pinToObject !== undefined)
+			{
+				cameraInstance.x = cameraInstance.pinToObject.x + cameraInstance.pinToObject.pinOffsetX;
+				cameraInstance.y = cameraInstance.pinToObject.y + cameraInstance.pinToObject.pinOffsetY;
+				if(cameraInstance.pinToObject.parent !== undefined && cameraInstance.pinToObject.parent.depth !== undefined)
+				cameraInstance.depth = cameraInstance.pinToObject.parent.depth + cameraInstance.pinToObject.pinOffsetZ;
+			}
+			applyLayerZDepth(exportRoot);
+		}
+		function applyLayerZDepth(parent)
+		{
+			var cameraInstance = parent.___camera___instance;
+			var focalLength = 528.25;
+			var projectionCenter = { 'x' : 0, 'y' : 0};
+			if(parent === exportRoot)
+			{
+				var stageCenter = { 'x' : lib.properties.width/2, 'y' : lib.properties.height/2 };
+				projectionCenter.x = stageCenter.x;
+				projectionCenter.y = stageCenter.y;
+			}
+			for(child in parent.children)
+			{
+				var layerObj = parent.children[child];
+				if(layerObj == cameraInstance)
+					continue;
+				applyLayerZDepth(layerObj, cameraInstance);
+				if(layerObj.layerDepth === undefined)
+					continue;
+				if(layerObj.currentFrame != layerObj.parent.currentFrame)
+				{
+					layerObj.gotoAndPlay(layerObj.parent.currentFrame);
+				}
+				var matToApply = new createjs.Matrix2D;
+				var cameraMat = new createjs.Matrix2D;
+				var totalDepth = layerObj.layerDepth ? layerObj.layerDepth : 0;
+				var cameraDepth = 0;
+				if(cameraInstance && !layerObj.isAttachedToCamera)
+				{
+					var mat = cameraInstance.getMatrix();
+					mat.tx -= projectionCenter.x;
+					mat.ty -= projectionCenter.y;
+					cameraMat = mat.invert();
+					cameraMat.prependTransform(projectionCenter.x, projectionCenter.y, 1, 1, 0, 0, 0, 0, 0);
+					cameraMat.appendTransform(-projectionCenter.x, -projectionCenter.y, 1, 1, 0, 0, 0, 0, 0);
+					if(cameraInstance.depth)
+						cameraDepth = cameraInstance.depth;
+				}
+				if(layerObj.depth)
+				{
+					totalDepth = layerObj.depth;
+				}
+				//Offset by camera depth
+				totalDepth -= cameraDepth;
+				if(totalDepth < -focalLength)
+				{
+					matToApply.a = 0;
+					matToApply.d = 0;
+				}
+				else
+				{
+					if(layerObj.layerDepth)
+					{
+						var sizeLockedMat = getProjectionMatrix(parent, layerObj.layerDepth);
+						if(sizeLockedMat)
+						{
+							sizeLockedMat.invert();
+							matToApply.prependMatrix(sizeLockedMat);
+						}
+					}
+					matToApply.prependMatrix(cameraMat);
+					var projMat = getProjectionMatrix(parent, totalDepth);
+					if(projMat)
+					{
+						matToApply.prependMatrix(projMat);
+					}
+				}
+				layerObj.transformMatrix = matToApply;
+			}
+		}
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	function makeResponsive(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  (w*sRatio-10)+'px';				
+			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;            
+			stage.tickOnUpdate = false;            
+			stage.update();            
+			stage.tickOnUpdate = true;		
+		}
+	}
+	makeResponsive(true,'both',false,1);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin: 0 auto;">
+    <a href="https://cablestar.ru/catalog/kabelnaya_produktsiya/?from=bystrokabel" class="noborder" target="_blank">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:900px; height:90px; margin: 0 auto;">
+		<canvas id="canvas" width="900" height="90" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:900px; height:90px; position: absolute; left: 0px; top: 0px; display: block; margin: 0 auto;">
+		</div>
+	</div>
+</body>																		</td>
+				</tr>
+			</table>
+
+			<!-- Header block -->
+			<div class="header">
+				
+				<!-- Menu block -->
+								
+				<div class="header-limiter">
+
+					<!-- User data -->
+					<div class="user">
+													<div id="button_user_info" class="button-user-info">
+								<center>
+									<div class="user-info-pic">
+										<img src="/i/menu/user2@2x.png" alt="Войти">
+									</div>
+									<span style="display: inline-block; padding-top: 3px;"><strong>Войти</strong></span>
+								</center>
+							</div>
+							<div id="user_info" class="user-info">
+								<form action="/auth/login/post" method="post">
+									<input type="hidden" name="action" value="login"/>
+									<table class="table_login">
+										<tr>
+											<td colspan="2" style="text-align: center; border-bottom: 1px solid #ccc; padding: 15px 10px;"><span style="margin-right: 20px;"><a href="/auth/reg"><b>Регистрация</b></a></span><a href="/auth/forget">Забыли пароль?</a></td>
+										</tr>
+										<tr>
+											<td style="vertical-align: middle;">Почта</td>
+											<td><input style="width: 200px;" type="text" value="" name="user[login]" id="input_login"/></td>
+										</tr>
+										<tr>
+											<td style="padding-top: 0; vertical-align: middle;">Пароль</td>
+											<td style="padding-top: 0;"><input style="width: 200px;" type="password" value="" name="user[pass]" autocomplete="off"/></td>
+										</tr>
+										<tr>
+											<td style="padding: 0 10px 15px;">&nbsp;</td>
+											<td style="padding: 0 10px 15px;"><input type="submit" class="green_button" value="Войти в систему"/></td>
+										</tr>
+									</table>
+								</form>
+							</div>
+											</div>
+					
+					<!-- Menu -->
+					<div class="mobile-logo-link"><a href="/"><img src="/i/logo_2020@2x.png" style="width: 124px; height: 18px; border: 0;"></a></div>
+					<div class="scrolling-hide">
+						<div class="menu">
+							<div class="menu-scroll">
+								<span class="menu-item  desktop-block-1000"><a href="/"><img src="/i/logo_2020@2x.png" style="margin-bottom: -1px; width: 124px; height: 18px; border: 0; vertical-align: bottom;" title="Быстрокабель" alt="Быстрокабель"></a></span><span class="menu-item  "><a href="/company">Организации</a></span><span class="menu-item  "><a href="/addstore">Добавить склад</a></span><span class="menu-item  "><a href="/offers">Заявки</a></span><span class="menu-item  "><a href="/tarifs">Оплата</a></span><span class="menu-item  "><a href="/calculator">Калькулятор</a></span><span class="menu-item  "><a href="/placement">Тара</a></span><span class="menu-item  "><a href="/lme">LME</a></span><span class="menu-item  "><a href="/item">Энциклопедия</a></span><span class="menu-item  " style="margin-right: 2%"><a href="/e/mufty-kabelnye">Муфты</a></span>							</div>
+						</div>
+					</div>
+
+					<!-- Search block -->
+					<form id="searchForm" action="/catalog/search">
+						<table class="search-table">
+							<tr>
+								<td style="width: 2%; padding: 0;"></td>
+								<td style="padding: 3px 0 0 0;">
+									<input type="text" name="query" class="search-text search-stores" value="МПО 0,75" placeholder="Введите маркоразмер" autocomplete="off" autofocus/>
+									<table class="search-select">
+										<tr>
+											<td class="search-stores sel" onclick="$('#searchForm').attr('action', '/catalog/search'); $('#searchForm').submit();">
+												наличие
+											</td>
+											<td style="width: 3px;">&nbsp;</td>
+											<td class="search-factory not-sel" onclick="$('#searchForm').attr('action', '/factory/search'); $('#searchForm').submit();">
+												произв<span class="desktop-block-350">одители</span><span class="mobile-block-350">.</span>
+											</td>
+											<td style="width: 3px;">&nbsp;</td>
+											<td class="search-character not-sel" onclick="$('#searchForm').attr('action', '/character/search'); $('#searchForm').submit();">
+												характер<span class="desktop-block-350">истики</span><span class="mobile-block-350">.</span>
+											</td>
+											<td style="width: 3px;">&nbsp;</td>
+											<td style="text-align: right; vertical-align: middle; padding: 0 5px;">
+												<span class="desktop-block-500"><a href="/lme" style="margin-right: 10px;">Cu: 7661,0</a> <a href="/lme">Al: 2160,0</a></span><span class="desktop-block-700" style="margin-left: 10px;">Складов:&nbsp;1116</span>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td style="width: 1px; padding: 3px 0 0 0;">
+									<span class="mobile-block-700"><input type="submit" value="Найти" class="search-submit search-stores"/></span><span class="desktop-block-700"><input type="submit" value="Найти кабель" class="search-submit search-stores"/></span>
+								</td>
+								
+								<td style="width: 2%; padding: 0;"></td>
+							</tr>
+						</table>
+					</form>
+					
+				</div>
+
+			</div>
+
+			<!-- Content -->
+			<div class="content">
+				<div style="padding: 0 2%;">
+					<h1>Информация о наличии кабеля и провода</h1>
+
+
+		
+					<div class="not-payed-message">
+				<table style="width: 100%;">
+					<tr>
+						<td style="width: 61px; text-align: right;">
+							<img src="/i/lock@2x.png" style="max-width: 55px; max-height: 50px;"/>
+						</td>
+						<td>
+							<p style="margin-top: 2px; line-height: 1.4em;">Дальнейший просмотр данных о&nbsp;поставщиках доступен только зарегистрированным пользователям.<br/>Пожалуйста, войдите в&nbsp;систему или&nbsp;пройдите мгновенную регистрацию.</p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align: center; font-size: 18px;">
+							<a href="/auth/reg">Зарегистрироваться</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<p><br/></p>
+		
+	
+	<div style="margin-bottom: 20px;">
+		<span style="white-space: nowrap; margin-right: 10px;"><span class="selected-left" style="border-color: transparent; background-color: transparent; color: #888; border-right-width: 1px;">&larr;<span class="desktop-block-700">&nbsp;предыдущая</span></span><span class="selected-right" style="border-color: transparent; background-color: transparent; color: #888; border-left-width: 1px;"><span class="desktop-block-700">следующая&nbsp;</span>&rarr;</span></span> <span class="selected-center" style="border-radius: 5px;">1</span>			</div>
+
+	<table class="result-table" style="border-bottom: 1px solid #ccc;">
+		<tr>
+			<th class="item">Наименование</th>
+			<th class="price"></th>
+			<th class="kolvo">Кол-во</th>
+							<th class="unit"></th>
+						<th class="company desktop-table-700">Поставщик</th>
+			<th class="note desktop-table-700"></th>
+		</tr>
+		<tr class="unhover" style="height: 10px;"><td colspan="6"></td></tr>
+
+		
+		
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">32,348</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/blue@2x.png" class="color"/><span><nobr>голубой/синий &mdash; 4,800 км</nobr></span></a><a class="tooltip"><img src="/i/colors/green@2x.png" class="color"/><span><nobr>зеленый &mdash; 1,300 км</nobr></span></a><a class="tooltip"><img src="/i/colors/yellow@2x.png" class="color"/><span><nobr>жёлтый &mdash; 0,835 км</nobr></span></a><a class="tooltip"><img src="/i/colors/red@2x.png" class="color"/><span><nobr>красный &mdash; 0,128 км</nobr></span></a><a class="tooltip"><img src="/i/colors/brown@2x.png" class="color"/><span><nobr>коричневый &mdash; 0,900 км</nobr></span></a><a class="tooltip"><img src="/i/colors/black@2x.png" class="color"/><span><nobr>чёрный &mdash; 7,728 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">15,691<span class="adapt"><nobr>7,728&nbsp;&nbsp;4,800&nbsp;&nbsp;1,300&nbsp;&nbsp;0,900&nbsp;&nbsp;0,835&nbsp;&nbsp;0,128</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/blue@2x.png" class="color"/><span><nobr>голубой/синий &mdash; 1,722 км</nobr></span></a><a class="tooltip"><img src="/i/colors/green@2x.png" class="color"/><span><nobr>зеленый &mdash; 0,600 км</nobr></span></a><a class="tooltip"><img src="/i/colors/yellow@2x.png" class="color"/><span><nobr>жёлтый &mdash; 0,710 км</nobr></span></a><a class="tooltip"><img src="/i/colors/red@2x.png" class="color"/><span><nobr>красный &mdash; 1,103 км</nobr></span></a><a class="tooltip"><img src="/i/colors/brown@2x.png" class="color"/><span><nobr>коричневый &mdash; 1,155 км</nobr></span></a><a class="tooltip"><img src="/i/colors/black@2x.png" class="color"/><span><nobr>чёрный &mdash; 1,087 км</nobr></span></a><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 1,150 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">7,589<span class="adapt"><nobr>1,298&nbsp;&nbsp;1,155&nbsp;&nbsp;1,103&nbsp;&nbsp;0,710&nbsp;&nbsp;0,650&nbsp;&nbsp;0,627&nbsp;&nbsp;0,600&nbsp;&nbsp;0,500...</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">7,315</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">5,652</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/atp@2x.png" class="color"/><span><nobr>приемка «АТП/РТ-ТП» &mdash; 1,470 км</nobr></span></a><a class="tooltip"><img src="/i/colors/blue@2x.png" class="color"/><span><nobr>голубой/синий &mdash; 0,629 км</nobr></span></a><a class="tooltip"><img src="/i/colors/yellow@2x.png" class="color"/><span><nobr>жёлтый &mdash; 0,498 км</nobr></span></a><a class="tooltip"><img src="/i/colors/red@2x.png" class="color"/><span><nobr>красный &mdash; 0,108 км</nobr></span></a><a class="tooltip"><img src="/i/colors/black@2x.png" class="color"/><span><nobr>чёрный &mdash; 0,588 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">3,598<span class="adapt"><nobr>0,800&nbsp;&nbsp;0,670&nbsp;&nbsp;0,498&nbsp;&nbsp;0,495&nbsp;&nbsp;0,368&nbsp;&nbsp;0,305&nbsp;&nbsp;0,220&nbsp;&nbsp;0,134...</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/green@2x.png" class="color"/><span><nobr>зеленый &mdash; 0,600 км</nobr></span></a><a class="tooltip"><img src="/i/colors/yellow@2x.png" class="color"/><span><nobr>жёлтый &mdash; 0,793 км</nobr></span></a><a class="tooltip"><img src="/i/colors/brown@2x.png" class="color"/><span><nobr>коричневый &mdash; 0,300 км</nobr></span></a><a class="tooltip"><img src="/i/colors/black@2x.png" class="color"/><span><nobr>чёрный &mdash; 0,951 км</nobr></span></a><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 0,178 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">2,822<span class="adapt"><nobr>0,951&nbsp;&nbsp;0,793&nbsp;&nbsp;0,600&nbsp;&nbsp;0,300&nbsp;&nbsp;0,178</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░, ░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">2,560</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/blue@2x.png" class="color"/><span><nobr>голубой/синий &mdash; 0,300 км</nobr></span></a><a class="tooltip"><img src="/i/colors/green@2x.png" class="color"/><span><nobr>зеленый &mdash; 0,300 км</nobr></span></a><a class="tooltip"><img src="/i/colors/yellow@2x.png" class="color"/><span><nobr>жёлтый &mdash; 0,260 км</nobr></span></a><a class="tooltip"><img src="/i/colors/red@2x.png" class="color"/><span><nobr>красный &mdash; 0,225 км</nobr></span></a><a class="tooltip"><img src="/i/colors/brown@2x.png" class="color"/><span><nobr>коричневый &mdash; 0,300 км</nobr></span></a><a class="tooltip"><img src="/i/colors/black@2x.png" class="color"/><span><nobr>чёрный &mdash; 0,256 км</nobr></span></a><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 0,119 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">1,760<span class="adapt"><nobr>0,300&nbsp;&nbsp;0,300&nbsp;&nbsp;0,300&nbsp;&nbsp;0,260&nbsp;&nbsp;0,256&nbsp;&nbsp;0,225&nbsp;&nbsp;0,119</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">1,711</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/green@2x.png" class="color"/><span><nobr>зеленый &mdash; 0,080 км</nobr></span></a><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 1,250 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">1,330<span class="adapt"><nobr>1,250&nbsp;&nbsp;0,080</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░, ░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 1,255 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">1,255</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/blue@2x.png" class="color"/><span><nobr>голубой/синий &mdash; 0,248 км</nobr></span></a><a class="tooltip"><img src="/i/colors/green@2x.png" class="color"/><span><nobr>зеленый &mdash; 0,036 км</nobr></span></a><a class="tooltip"><img src="/i/colors/yellow@2x.png" class="color"/><span><nobr>жёлтый &mdash; 0,370 км</nobr></span></a><a class="tooltip"><img src="/i/colors/red@2x.png" class="color"/><span><nobr>красный &mdash; 0,326 км</nobr></span></a><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 0,205 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">1,185<span class="adapt"><nobr>0,370&nbsp;&nbsp;0,326&nbsp;&nbsp;0,248&nbsp;&nbsp;0,205&nbsp;&nbsp;0,036</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/pz@2x.png" class="color"/><span><nobr>приемка «ПЗ/ВП» &mdash; 0,298 км</nobr></span></a><a class="tooltip"><img src="/i/colors/red@2x.png" class="color"/><span><nobr>красный &mdash; 0,400 км</nobr></span></a><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 0,415 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">1,113<span class="adapt"><nobr>0,415&nbsp;&nbsp;0,400&nbsp;&nbsp;0,298</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/blue@2x.png" class="color"/><span><nobr>голубой/синий &mdash; 0,100 км</nobr></span></a><a class="tooltip"><img src="/i/colors/red@2x.png" class="color"/><span><nobr>красный &mdash; 0,080 км</nobr></span></a><a class="tooltip"><img src="/i/colors/brown@2x.png" class="color"/><span><nobr>коричневый &mdash; 0,100 км</nobr></span></a><a class="tooltip"><img src="/i/colors/black@2x.png" class="color"/><span><nobr>чёрный &mdash; 0,147 км</nobr></span></a><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 0,600 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">1,027<span class="adapt"><nobr>0,600&nbsp;&nbsp;0,147&nbsp;&nbsp;0,100&nbsp;&nbsp;0,100&nbsp;&nbsp;0,080</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 0,230 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,230</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/red@2x.png" class="color"/><span><nobr>красный &mdash; 0,135 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,135</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/black@2x.png" class="color"/><span><nobr>чёрный &mdash; 0,100 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">0,132<span class="adapt"><nobr>0,100&nbsp;&nbsp;0,032</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,050</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/black@2x.png" class="color"/><span><nobr>чёрный &mdash; 0,037 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,037</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo/mpo-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 0,75" title="Характеристики МПО 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,020</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			<tr class="unhover" style="height: 10px;"><td colspan="6"></td></tr>
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 23-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-23-11/mpo-23-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 23-11 0,75" title="Характеристики МПО 23-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">15,000</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 23-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-23-11/mpo-23-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 23-11 0,75" title="Характеристики МПО 23-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">5,308</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 23-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-23-11/mpo-23-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 23-11 0,75" title="Характеристики МПО 23-11 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/pz@2x.png" class="color"/><span><nobr>приемка «ПЗ/ВП» &mdash; 3,362 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">3,362</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 23-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-23-11/mpo-23-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 23-11 0,75" title="Характеристики МПО 23-11 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/blue@2x.png" class="color"/><span><nobr>голубой/синий &mdash; 0,582 км</nobr></span></a><a class="tooltip"><img src="/i/colors/red@2x.png" class="color"/><span><nobr>красный &mdash; 0,444 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">1,026<span class="adapt"><nobr>0,500&nbsp;&nbsp;0,444&nbsp;&nbsp;0,082</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 23-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-23-11/mpo-23-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 23-11 0,75" title="Характеристики МПО 23-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,346</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 23-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-23-11/mpo-23-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 23-11 0,75" title="Характеристики МПО 23-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,031</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			<tr class="unhover" style="height: 10px;"><td colspan="6"></td></tr>
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-33-11/mpo-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 33-11 0,75" title="Характеристики МПО 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">39,692</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-33-11/mpo-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 33-11 0,75" title="Характеристики МПО 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">15,471</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-33-11/mpo-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 33-11 0,75" title="Характеристики МПО 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">5,566</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-33-11/mpo-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 33-11 0,75" title="Характеристики МПО 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">4,335</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-33-11/mpo-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 33-11 0,75" title="Характеристики МПО 33-11 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/blue@2x.png" class="color"/><span><nobr>голубой/синий &mdash; 0,353 км</nobr></span></a><a class="tooltip"><img src="/i/colors/red@2x.png" class="color"/><span><nobr>красный &mdash; 0,490 км</nobr></span></a><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 3,182 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">4,035<span class="adapt"><nobr>2,938&nbsp;&nbsp;0,490&nbsp;&nbsp;0,353&nbsp;&nbsp;0,244&nbsp;&nbsp;0,010</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-33-11/mpo-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 33-11 0,75" title="Характеристики МПО 33-11 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 1,345 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">1,345</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░</td>
+				</tr>
+					
+														<tr class="unhover">
+					<td colspan="6" style="padding: 30px 0;">
+						<table class="banner-900-90">
+							<tr>
+								<td style="position: relative;" id="middle_banner">
+																												<a href="https://www.mpkabel.ru/products/?from=bystrokabel" class="noborder" target="_blank"><img src="/i/reklama/reklama_marposadkabel_4.gif" width="900" height="90" style="height: auto;" alt="Реклама Марпосадкабель"></a>																	</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+						
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-33-11/mpo-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 33-11 0,75" title="Характеристики МПО 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">1,125</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-33-11/mpo-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 33-11 0,75" title="Характеристики МПО 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,871</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-33-11/mpo-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 33-11 0,75" title="Характеристики МПО 33-11 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/green@2x.png" class="color"/><span><nobr>зеленый &mdash; 0,177 км</nobr></span></a><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 0,555 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">0,849<span class="adapt"><nobr>0,555&nbsp;&nbsp;0,177&nbsp;&nbsp;0,117</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-33-11/mpo-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 33-11 0,75" title="Характеристики МПО 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,546</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-33-11/mpo-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 33-11 0,75" title="Характеристики МПО 33-11 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/os@2x.png" class="color"/><span><nobr>приемка «ОС» &mdash; 0,519 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,519</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-33-11/mpo-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 33-11 0,75" title="Характеристики МПО 33-11 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/pz@2x.png" class="color"/><span><nobr>приемка «ПЗ/ВП» &mdash; 0,269 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">0,486<span class="adapt"><nobr>0,269&nbsp;&nbsp;0,217</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-33-11/mpo-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 33-11 0,75" title="Характеристики МПО 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,348</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПО 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpo-33-11/mpo-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПО 33-11 0,75" title="Характеристики МПО 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,186</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░, ░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			<tr class="unhover" style="height: 10px;"><td colspan="6"></td></tr>
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe/mpoe-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 0,75" title="Характеристики МПОЭ 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/green@2x.png" class="color"/><span><nobr>зеленый &mdash; 0,502 км</nobr></span></a><a class="tooltip"><img src="/i/colors/yellow@2x.png" class="color"/><span><nobr>жёлтый &mdash; 0,063 км</nobr></span></a><a class="tooltip"><img src="/i/colors/black@2x.png" class="color"/><span><nobr>чёрный &mdash; 0,848 км</nobr></span></a><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 1,082 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">2,511<span class="adapt"><nobr>0,716&nbsp;&nbsp;0,682&nbsp;&nbsp;0,502&nbsp;&nbsp;0,400&nbsp;&nbsp;0,132&nbsp;&nbsp;0,063&nbsp;&nbsp;0,016</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe/mpoe-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 0,75" title="Характеристики МПОЭ 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/green@2x.png" class="color"/><span><nobr>зеленый &mdash; 0,036 км</nobr></span></a><a class="tooltip"><img src="/i/colors/black@2x.png" class="color"/><span><nobr>чёрный &mdash; 1,463 км</nobr></span></a><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 0,560 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">2,059<span class="adapt"><nobr>1,463&nbsp;&nbsp;0,560&nbsp;&nbsp;0,036</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe/mpoe-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 0,75" title="Характеристики МПОЭ 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,971</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe/mpoe-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 0,75" title="Характеристики МПОЭ 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,823</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe/mpoe-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 0,75" title="Характеристики МПОЭ 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,805</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe/mpoe-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 0,75" title="Характеристики МПОЭ 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,158</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe/mpoe-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 0,75" title="Характеристики МПОЭ 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,082</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe/mpoe-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 0,75" title="Характеристики МПОЭ 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,063</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe/mpoe-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 0,75" title="Характеристики МПОЭ 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/black@2x.png" class="color"/><span><nobr>чёрный &mdash; 0,029 км</nobr></span></a></div></td>
+								
+								
+											<td class="price"><a class="price tooltip"  style="cursor: help !important;"><i>26 180 руб.</i><span>Цена, руб./км с НДС</span></a></td>
+					
+				
+													<td style="text-align: right; white-space: nowrap;">0,029</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe/mpoe-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 0,75" title="Характеристики МПОЭ 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,028</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe/mpoe-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 0,75" title="Характеристики МПОЭ 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,014</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			<tr class="unhover" style="height: 10px;"><td colspan="6"></td></tr>
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 23-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe-23-11/mpoe-23-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 23-11 0,75" title="Характеристики МПОЭ 23-11 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/red@2x.png" class="color"/><span><nobr>красный &mdash; 0,281 км</nobr></span></a><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 0,126 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">0,407<span class="adapt"><nobr>0,281&nbsp;&nbsp;0,126</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 23-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe-23-11/mpoe-23-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 23-11 0,75" title="Характеристики МПОЭ 23-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,148</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 23-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe-23-11/mpoe-23-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 23-11 0,75" title="Характеристики МПОЭ 23-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,030</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			<tr class="unhover" style="height: 10px;"><td colspan="6"></td></tr>
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe-33-11/mpoe-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 33-11 0,75" title="Характеристики МПОЭ 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">2,526</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe-33-11/mpoe-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 33-11 0,75" title="Характеристики МПОЭ 33-11 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/atp@2x.png" class="color"/><span><nobr>приемка «АТП/РТ-ТП» &mdash; 1,867 км</nobr></span></a><a class="tooltip"><img src="/i/colors/pz@2x.png" class="color"/><span><nobr>приемка «ПЗ/ВП» &mdash; 0,107 км</nobr></span></a><a class="tooltip"><img src="/i/colors/blue@2x.png" class="color"/><span><nobr>голубой/синий &mdash; 0,183 км</nobr></span></a><a class="tooltip"><img src="/i/colors/red@2x.png" class="color"/><span><nobr>красный &mdash; 0,280 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;"><a class="tooltip pieces">2,437<span class="adapt"><nobr>1,000&nbsp;&nbsp;0,867&nbsp;&nbsp;0,280&nbsp;&nbsp;0,183&nbsp;&nbsp;0,107</nobr></span></a></td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe-33-11/mpoe-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 33-11 0,75" title="Характеристики МПОЭ 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">1,257</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe-33-11/mpoe-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 33-11 0,75" title="Характеристики МПОЭ 33-11 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/white@2x.png" class="color"/><span><nobr>белый &mdash; 1,228 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">1,228</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe-33-11/mpoe-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 33-11 0,75" title="Характеристики МПОЭ 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,993</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe-33-11/mpoe-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 33-11 0,75" title="Характеристики МПОЭ 33-11 0,75"></a><div style="float: right;"><a class="tooltip"><img src="/i/colors/blue@2x.png" class="color"/><span><nobr>голубой/синий &mdash; 0,500 км</nobr></span></a></div></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,500</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe-33-11/mpoe-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 33-11 0,75" title="Характеристики МПОЭ 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,434</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe-33-11/mpoe-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 33-11 0,75" title="Характеристики МПОЭ 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,316</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░░, ░░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe-33-11/mpoe-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 33-11 0,75" title="Характеристики МПОЭ 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,140</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░░, ░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░, ░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe-33-11/mpoe-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 33-11 0,75" title="Характеристики МПОЭ 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,016</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░░░, ░░░░░░░░░</td>
+				</tr>
+					
+									
+			
+			
+			
+			<tr>
+
+												<td><span class="mobile-bold-700">МПОЭ 33-11 0,75</span>&nbsp;&nbsp;&nbsp;<a href="/item/mpoe-33-11/mpoe-33-11-0-75?from=info" class="info noborder"><img src="/i/info.png" style="width: 14px; height: 14px; position: absolute; bottom: 0; left: 0;" alt="Характеристики МПОЭ 33-11 0,75" title="Характеристики МПОЭ 33-11 0,75"></a></td>
+								
+								
+					<td style="padding: 3px 0;"></td>
+
+				
+													<td style="text-align: right; white-space: nowrap;">0,007</td>
+					<td style="text-align: left;"><span style="color: #888; padding-left: 5px;">км</span></td>
+				
+													<td class="desktop-table-700">░░░░░░░░░░░░░░░░░, ░░░░░░░░</td>
+					<td class="desktop-table-700"></td>
+								
+			</tr>
+			
+										<tr class="mobile-table-row-700 unhover">
+					<td class="mobile-table-700" style="padding: 0 3px 20px; line-height: 1.4em;" colspan="4">░░░░░░░░░░░░░, ░░░░░░░</td>
+				</tr>
+							<tr class="unhover" style="height: 10px;"><td colspan="6"></td></tr>
+	</table>
+				
+	<div style="margin-top: 20px;">
+		<span style="white-space: nowrap; margin-right: 10px;"><span class="selected-left" style="border-color: transparent; background-color: transparent; color: #888; border-right-width: 1px;">&larr;<span class="desktop-block-700">&nbsp;предыдущая</span></span><span class="selected-right" style="border-color: transparent; background-color: transparent; color: #888; border-left-width: 1px;"><span class="desktop-block-700">следующая&nbsp;</span>&rarr;</span></span> <span class="selected-center" style="border-radius: 5px;">1</span>	</div>
+
+	<div class="bottom-block">
+		<b>Не нашли того, что искали?</b><br/>
+		Бесплатно разместите заявку в &laquo;<a href="/offers">Заявках онлайн</a>&raquo; и её смогут увидеть все посетители сайта.<br/>
+		Узнайте, какие производители могут изготовить <a href="/factory/search?query=МПО 0,75">нужный вам кабель</a>.
+	</div>
+
+	
+	<div style="clear: both;"></div>
+
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+				
+						
+			
+				<!-- Bottom banner 900x200 -->
+				<div class="bottom-banner">
+					<div style="width: 100%; height: 40px; border-bottom: 1px solid #ccc;"></div>
+					<table class="banner-900-200">
+						<tr>
+							<td id="bottom_banner">
+								<a href="https://copperway.ru" class="noborder" target="_blank"><img src="/i/reklama/reklama_mednyy_put_2.gif" width="900" height="200" style="height: auto; border: 1px solid #ccc;" alt="Реклама Медный путь"></a>							</td>
+						</tr>
+					</table>
+				</div>
+
+			
+			<!-- Footer -->
+			<div class="footer">
+
+				<table class="footer-table">
+					<tr>
+						<td>
+							<p>
+								<span style="white-space: nowrap;"><a href="/reklama">Реклама на вашей странице</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/banner">Баннерная&nbsp;реклама</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/oferta">Публичная&nbsp;оферта</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/policy">Политика&nbsp;конфиденциальности</a>
+							</p>
+							<p>
+								<span style="white-space: nowrap;">&#169; 2010&ndash;2022 &laquo;НТПС-Информ&raquo;</span>&nbsp;&nbsp;&nbsp;&nbsp; <span style="white-space: nowrap;">Телефон: +7 (351) 751-0-135</span>&nbsp;&nbsp;&nbsp;&nbsp; <span style="white-space: nowrap;">Почта: <a href="mailto:info@bystrokabel.ru">info@bystrokabel.ru</a></span>
+							</p>
+							<p style="margin-bottom: 0;">
+								Мы&nbsp;не&nbsp;занимаемся продажей кабеля. Информация о&nbsp;наличии и&nbsp;стоимости продукции не&nbsp;является публичной офертой.
+							</p>
+						</td>
+						<td style="vertical-align: top; width: 1px;">
+							<!-- Yandex.Metrika informer -->
+							<a href="https://metrika.yandex.ru/stat/?id=1718029&amp;from=informer" class="noborder"
+							target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/1718029/3_0_F7F7F7FF_D7D7D7FF_0_pageviews"
+							style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="1718029" data-lang="ru" /></a>
+							<!-- /Yandex.Metrika informer -->
+						</td>
+					</tr>
+				</table>
+
+			</div>
+
+		</div>
+
+		<!-- Yandex.Metrika counter -->
+		<script defer>
+		   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+		   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+		   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+		
+		   ym(1718029, "init", {
+		        clickmap:true,
+		        trackLinks:true,
+		        accurateTrackBounce:true,
+		        webvisor:true
+		   });
+		</script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/1718029" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+		<!-- Google Analitycs -->
+		<script defer>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-19330251-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
+		<!-- /Google Analitycs -->
+			</body>
+</html>
