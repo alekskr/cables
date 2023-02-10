@@ -1,10 +1,14 @@
 import provoda_montazhnye
 import provoda_montazhnye_s_kombinirovannoy_izolyatsiey
 import provoda_mpo
+import provoda_ustanovochnye
 
 import pandas as pd
 
-all_lists = provoda_mpo.all_cables + provoda_montazhnye.all_cables + provoda_montazhnye_s_kombinirovannoy_izolyatsiey.all_cables
+all_lists = provoda_mpo.all_cables + \
+            provoda_montazhnye.all_cables + \
+            provoda_montazhnye_s_kombinirovannoy_izolyatsiey.all_cables +\
+            provoda_ustanovochnye.all_cables
 
 data = pd.DataFrame({'Провод': [],
                      'Наружный диаметр': [],

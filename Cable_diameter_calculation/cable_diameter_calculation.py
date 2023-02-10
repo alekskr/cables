@@ -4,8 +4,12 @@ import math
 
 def main():
     print('Введите количество типов проводов: ', end='')
-    n_type_wires = int(input())  # количество типов проводов
-    if n_type_wires == 0:
+    n_type_wires = input()  # количество типов проводов
+    try:
+        n_type_wires = int(n_type_wires)
+        if n_type_wires == 0:
+            main()
+    except ValueError:
         main()
     n_wires = 0  # общее число проводов
     d_wires = []  # список диаметров проводов
@@ -14,14 +18,19 @@ def main():
         my_wire = input()
         my_wire_checked = check_name_wire(my_wire)  # вызов функции корректности ввода
         d_wire = define_wire_params(my_wire_checked)  # вызов функции определения диаметра данного провода из json файла
-        d_wires.append(d_wire)
-        # print(d_wires)
         print('Введите количество проводов данного типа: ', end='')
         n_wire = int(input())  # количество проводов данного типа
         n_wires += n_wire  # прибавляем к общему количеству проводов
+        for _ in range(n_wire):
+            d_wires.append(d_wire)  # добавляем диаметр каждого провода в список диаметров
+        # print(d_wires)
         # print(n_wires)
-    d_jgut = 1.25 * math.sqrt(n_wires) * sum(d_wires)/len(d_wires)
-    print(f'Диаметр жгута: {round(d_jgut, 1)}\n')
+    diam_sredniy = sum(d_wires) / len(d_wires)  # среднее арифметическое значение диаметра провода, мм
+    if len(d_wires) == 1:
+        diametr_jguta = math.sqrt(n_wires) * diam_sredniy
+    else:
+        diametr_jguta = 1.25 * math.sqrt(n_wires) * diam_sredniy
+    print(f'Диаметр жгута: {round(diametr_jguta, 1)} мм\n')
     what_to_do_next()  # вызов функции о дальнейшем действии
 
 
@@ -30,7 +39,7 @@ def check_name_wire(my_wire):
     find_space = my_wire.find(' ')
     my_wire_name = my_wire[:find_space].upper()
     # print(my_wire_name)
-    my_wire_type = my_wire[find_space:].replace('.', ',')
+    my_wire_type = my_wire[find_space:].replace('.', ',').replace('x', 'х')
     my_wire = my_wire_name + my_wire_type
     # print('type:', my_wire)
     return my_wire
@@ -43,7 +52,13 @@ def define_wire_params(my_wire):
             find_space = v['Наружный диаметр'].find(' ')
             diam_wire = v['Наружный диаметр'][:find_space].replace(',', '.')
             # print(diam_wire)
-            return float(diam_wire)
+            try:
+                return float(diam_wire)
+            except ValueError:
+                find_x = v['Наружный диаметр'].find('х')
+                diam_wire = v['Наружный диаметр'][(find_x + 1):find_space].replace(',', '.')
+                # print(f'd = {diam_wire}')
+                return float(diam_wire)
     else:
         print('''
         Такого провода не существует.
